@@ -7,4 +7,4 @@ Az elképzelt feladat egy kisállatverseny folyamatát mutatja be. Az alap elké
 
 ## Továbbfejlesztési lehetőségek:
 A verseny útvonala eltérő felületű szakaszokból áll. Például 2 méter erdős rész, aztán 5 méter kavicsos, utána 1 méter pocsolyás felület. Ezek a szakaszok befolyásolhatják az egyes állatok sebességét.  
-Illetve van olyan állat is melyik nem képes megtenni az adott szakaszt, , ekkor az adott állat kiesik a versenyből.
+Illetve van olyan állat is melyik nem képes megtenni az adott szakaszt, ekkor az adott állat kiesik a versenyből.
