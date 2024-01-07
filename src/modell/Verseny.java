@@ -10,6 +10,7 @@ public class Verseny {
     private int allatDb;
     private boolean zajlik;
     private int tav;
+    int ido;
 
     public Verseny() {
         this(5);
@@ -19,6 +20,9 @@ public class Verseny {
         allatDb = 0;
         allatok = new Allat[db];
         zajlik = true;
+        tav = 100;
+        ido = 0;
+       
     }
 
     public void benevez(Allat allat) {
@@ -29,12 +33,12 @@ public class Verseny {
         }
     }
 
-    public void halad(Nev){
+    public void halad(Nev){ 
         int i = 0;
         while(allatok[i] == null || i < allatDb && !(allatok[i].getNev().equals(Nev))){
             i++;
         }if( i < allatDb){
-            allatok[i].isVersenyben()
+            ido = allatok[i].sebesseg * tav;
         }
 
        
