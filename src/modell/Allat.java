@@ -1,12 +1,31 @@
-
 package modell;
 
-
 public class Allat {
-        private String Nev;
-        private boolean versenyben;
-        int sebesseg;
-        int helyezes;
+
+    private String Nev;
+    private boolean versenyben;
+    private boolean celbaEr;
+    int sebesseg;
+    int ido;
+
+    
+    
+    public Allat(String Nev) {
+        this.Nev = Nev;
+        versenyben = true;
+        sebesseg = 100;
+        this.ido = ido;
+        celbaEr = false;
+     
+    }
+
+    public int getIdo() {
+        return ido;
+    }
+
+    public void setIdo(int ido) {
+        this.ido = ido;
+    }
 
     public int getSebesseg() {
         return sebesseg;
@@ -17,17 +36,11 @@ public class Allat {
     }
 
     public int getHelyezes() {
-        return helyezes;
+        return ido;
     }
 
     public void setHelyezes(int helyezes) {
-        this.helyezes = helyezes;
-    }
-
-    public Allat(String Nev) {
-        this.Nev = Nev;
-        versenyben = true;
-        sebesseg = 100;
+        this.ido = helyezes;
     }
 
     public String getNev() {
@@ -46,16 +59,21 @@ public class Allat {
         this.versenyben = versenyben;
     }
 
-    @Override
-    public String toString() {
-        return "Allat{" + "Nev=" + Nev + ", versenyben=" + versenyben + ", sebesseg=" + sebesseg + ", helyezes=" + helyezes + '}';
+    public boolean isCelbaEr() {
+        return celbaEr;
     }
 
+    public void setCelbaEr(boolean celbaEr) {
+        this.celbaEr = celbaEr;
+    }
+
+    @Override
+    public String toString() {
+        return "Allat{" + "Nev=" + Nev + ", versenyben=" + versenyben + ", celbaEr=" + celbaEr + ", sebesseg=" + sebesseg + ", ido=" + ido + '}';
+    }
+    
+    
+    
     
 
-
-
-    
-    
-          
 }
