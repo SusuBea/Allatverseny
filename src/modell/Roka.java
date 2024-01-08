@@ -13,7 +13,7 @@ public class Roka extends Allat {
     public Roka() {
         super("Roka");
         setKitartas(80);
-        setSebesseg(90);
+        setSebesseg(35);
 
     }
 
@@ -27,7 +27,7 @@ public class Roka extends Allat {
         // kiszámoljuk, hogy feladja-e az állat ezen a terepen. 
         if (!farad(tavolsag * getRandom().nextInt(2, 5))) {
             // Ha nem, akkor kiszámoljuk, hogy mennyi idő alatt ér át rajta.
-            int reszido = tavolsag * 1000 / getSebesseg();
+            int reszido = tavolsag * 1000  / getSebesseg();
             idotHozzaad(reszido);
             return reszido;
         } else {

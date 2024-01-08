@@ -17,16 +17,20 @@ public class Verseny {
         this(5);
     }
 
+ 
+    
     public void ujSzakasz(TerepTipus terepTipus) {
         int tav = rnd.nextInt(1, 4);
         osszTav += tav;
         for (Allat allat : allatok) {
             if (allat != null) {
                 int reszido = allat.ujSzakaszhozEr(terepTipus, tav);
-                if (reszido < 0) {
+                allat.idotHozzaad(reszido);
+                if(reszido < 0){
                     System.out.println(allat.getNev() + " feladta!");
+                    allat = null;    
                 } else {
-                    System.out.println("A " + allat.getNev() + " " + reszido + " masodperc alatt teljesitette a tavot!!");
+                    System.out.println("A " + allat.getNev() + " " + reszido + " másodperc alatt teljesítette a távot!!");
                 }
             }
         }
@@ -71,8 +75,17 @@ public class Verseny {
             return -1;
         }
     }
-
-
+    
+    public void idoKiir(){
+        
+        for (Allat allat : allatok) {
+            if (allat != null){
+            System.out.println(String.format("%s %d másodperc alatt teljesített az össztávot.", allat.getNev(), allat.getIdo()));
+        
+        }
+    }
+    }
+    
     public String[] getAllatokLeirasa() {
         String[] allatok = new String[this.allatok.length];
         for (int i = 0; i < allatDb; i++) {
@@ -85,17 +98,5 @@ public class Verseny {
         return allatok;
     }
 
-//    public String[] getAllatokLeirasa2() {
-//        String[] allatok = new String[this.allatok.length];
-//        for (int i = 0; i < allatDb; i++) {
-//            Allat a = this.allatok[i];
-//            int elso = this.allatok[0].sebesseg;
-//            String nyertes = "";
-//            if (this.allatok[i].sebesseg > elso) {
-//                nyertes += this.allatok[i];
-//
-//            }
-//        }
-//        return nyertes;
-//    }
+
 }

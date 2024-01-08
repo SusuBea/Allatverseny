@@ -13,7 +13,7 @@ public class Nyul extends Allat {
     public Nyul() {
         super("Nyul");
         setKitartas(60);
-        setSebesseg(110);
+        setSebesseg(40);
     }
 
     @Override

@@ -24,7 +24,6 @@ public abstract class Allat {
         this.Nev = Nev;
         versenyben = true;
         sebesseg = 1;
-        // this.ido = ido;
         celbaEr = false;
         kitartas = 0;
     }

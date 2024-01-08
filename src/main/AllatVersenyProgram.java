@@ -1,4 +1,3 @@
-
 package main;
 
 import java.util.Iterator;
@@ -9,16 +8,15 @@ import modell.Roka;
 import modell.TerepTipus;
 import modell.Verseny;
 
-
 public class AllatVersenyProgram {
+
     private Verseny verseny;
-   
+
     public static void main(String[] args) {
         new AllatVersenyProgram();
     }
-    
-    
-    public  AllatVersenyProgram(){
+
+    public AllatVersenyProgram() {
         verseny = new Verseny(4);
         verseny.benevez(new Borz());
         verseny.benevez(new Nyul());
@@ -26,43 +24,32 @@ public class AllatVersenyProgram {
         System.out.println("RAJT: ----");
         System.out.println("Erdős terep: ----");
         verseny.ujSzakasz(TerepTipus.erdo);
+       
+        
         System.out.println("Dombos terep: ----");
         verseny.ujSzakasz(TerepTipus.dombos);
+       
+        
         System.out.println("Hegyes terep: ----");
         verseny.ujSzakasz(TerepTipus.hegyes);
+        
+        
         System.out.println("Sík terep: ----");
         verseny.ujSzakasz(TerepTipus.mezo);
-        versenyAllataitKiir();
-        
-        
-        System.out.println("******- - - -******");
-
-        
-        System.out.println("CÉL: ----");
        
- 
-    } 
+        System.out.println("****************- - - - - - - - - -****************");
 
-        
- 
- public void versenyAllataitKiir(){
-     for(String allat: verseny.getAllatokLeirasa()){
-         if( allat != null){
-             System.out.println(allat);
-         }
-     }
+        System.out.println("***************- - - C - É - L - - - -**************");
+        verseny.idoKiir();
+
+    }
+
+    public void versenyAllataitKiir() {
+        for (String allat : verseny.getAllatokLeirasa()) {
+            if (allat != null) {
+                System.out.println(allat);
+            }
+        }
+    }
+
 }
- 
- 
-
- 
- 
-
-    
-}
-
-
-
-
-
-
