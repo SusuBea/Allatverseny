@@ -24,14 +24,16 @@ public class Roka extends Allat {
 
     @Override
     public int ujSzakaszhozEr(TerepTipus terepTipus, int tavolsag) {
-        // kiszámoljuk, hogy feladja-e az állat ezen a terepen. 
+        // kiszámoljuk, hogy feladja-e az állat ezen a terepen.
         if (!farad(tavolsag * getRandom().nextInt(2, 5))) {
             // Ha nem, akkor kiszámoljuk, hogy mennyi idő alatt ér át rajta.
-            int reszido = tavolsag * 1000  / getSebesseg();
+            int reszido = tavolsag * 1000 / getSebesseg();
             idotHozzaad(reszido);
             return reszido;
         } else {
-            // Ha igen, -1-gyel tér vissza a függvény.
+            // Ha igen, beállítjuk az állatot versenyen kívülinek.
+            setVersenyben(false);
+            // -1-gyel térünk vissza a függvényből.
             return -1;
         }
     }

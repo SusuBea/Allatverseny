@@ -111,9 +111,14 @@ public abstract class Allat {
 
     public abstract String statuszSzoveg();
 
+    
+
     @Override
     public String toString() {
-        return "Allat{" + "Nev=" + Nev + ", versenyben=" + versenyben + ", celbaEr=" + celbaEr + ", sebesseg=" + sebesseg + ", ido=" + ido + '}';
+        return Nev;
     }
+   
+
+
 
 }

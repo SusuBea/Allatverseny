@@ -1,6 +1,7 @@
 package main;
 
 import java.util.Iterator;
+import java.util.List;
 import modell.Allat;
 import modell.Borz;
 import modell.Nyul;
@@ -24,23 +25,29 @@ public class AllatVersenyProgram {
         System.out.println("RAJT: ----");
         System.out.println("Erdős terep: ----");
         verseny.ujSzakasz(TerepTipus.erdo);
-       
-        
+
         System.out.println("Dombos terep: ----");
         verseny.ujSzakasz(TerepTipus.dombos);
-       
-        
+
         System.out.println("Hegyes terep: ----");
         verseny.ujSzakasz(TerepTipus.hegyes);
-        
-        
+
         System.out.println("Sík terep: ----");
         verseny.ujSzakasz(TerepTipus.mezo);
-       
+        verseny.ujSzakasz(TerepTipus.mezo);
+        verseny.ujSzakasz(TerepTipus.mezo);
+        verseny.ujSzakasz(TerepTipus.mezo);
+        verseny.ujSzakasz(TerepTipus.mezo);
+
+        verseny.ujSzakasz(TerepTipus.mezo);
+
         System.out.println("****************- - - - - - - - - -****************");
 
         System.out.println("***************- - - C - É - L - - - -**************");
         verseny.idoKiir();
+       
+       
+
 
     }
 
